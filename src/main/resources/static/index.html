@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ISBN Book Finder</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link href="style.css" rel="stylesheet">
+
+</head>
+
+<body>
+
+<div class="container">
+
+    <div class="title">
+        ISBN Book Finder
+    </div>
+
+    <div class="search-box">
+        <input type="text" id="isbn" placeholder="Enter ISBN number">
+        <button onclick="searchBook()">Search</button>
+    </div>
+
+    <div class="book-card" id="bookCard">
+
+        <div class="book-image">
+            <img id="coverImage">
+        </div>
+
+        <div class="book-info">
+            <h2 id="title"></h2>
+            <p><strong>Author:</strong> <span id="author"></span></p>
+            <p><strong>Publisher:</strong> <span id="publisher"></span></p>
+            <p><strong>Published Date:</strong> <span id="publishedDate"></span></p>
+            <p><strong>Genre:</strong> <span id="genre"></span></p>
+            <p class="price">₹ <span id="price"></span></p>
+            <button onclick="saveBook()" id="saveBtn" style="margin-top:15px, color:blue, display:none;">
+                Save Book
+            </button>
+        </div>
+
+    </div>
+
+    <div id="errorMsg" class="error-box"></div>
+    <div id="loadingMsg" style="display:none; text-align:center;">
+        <div class="spinner"></div>
+    </div>
+
+</div>
+<script src="script.js"></script>
+</body>
+</html>
